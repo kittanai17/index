@@ -13,6 +13,86 @@
     <script src="app2.js" type="text/javascript"></script>
     <link rel="stylesheet" href="index.css">
 </head>
+<style>
+    body {
+    margin: 0;
+    padding: 20px 50px;
+    background-image: url(images/bg.png);
+    background-size: 100%;
+    font-family: 'RocknRoll One', sans-serif;
+    color: white;
+    font-weight: 700px;
+}
+
+.all {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 200px 1650px 200px;
+    grid-template-rows: 300px auto 200px;
+    grid-template-areas:
+        "head head head"
+        "score board rightB"
+        "left board righB";
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: head;
+    font-size: 25px;
+}
+
+.head h1 {
+    margin-top: -3px;
+}
+
+.score {
+    grid-area: score;
+    color: aliceblue;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    /* border-radius: 8px; */
+}
+
+.score .score {
+    color: rgb(253, 122, 0);
+    font-size: 40px;
+}
+
+.score .message {
+    color: rgb(154, 252, 255);
+    font-size: 30px;
+}
+
+.gameBoard {
+    grid-area: board;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    width: 1600px;
+    padding: 30px 10px;
+    border-radius: 8px;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.grid .img {
+    cursor: pointer;
+}
+.grid .img-elevate{
+transition: transform 0.1s ease-out 0s; /* Animation Delayed */
+cursor: pointer;
+}
+.grid .img:hover{
+    transform: translateY(-10px);
+}
+</style>
 
 <body>
     <div class="all">
